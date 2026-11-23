@@ -1,0 +1,4 @@
+# Local hunting notes — never committed (may contain target details)
+notes/
+*.log
+.DS_Store
