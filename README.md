@@ -1,7 +1,23 @@
 # Bug Hunter Skills
 
-An original, beginner-friendly skill bundle for **authorized bug bounty hunting** —
-built for a hunter learning the craft from zero, one bug class at a time.
+![Bug Hunter Skills](assets/social-preview.png)
+
+**Learn bug bounty hunting one bug class at a time.**
+
+13 skills · 3 workflow commands · Bugcrowd + HackerOne report templates — an original, beginner-friendly bundle built in the open while learning the craft from zero.
+
+## Quickstart
+
+```bash
+git clone https://github.com/red-xz/bug-hunter-skills.git
+# copy skills/ into your AI coding agent's skills directory, e.g. ~/.claude/skills/
+cp -r bug-hunter-skills/skills ~/.claude/skills/
+```
+
+The agent discovers skills by their frontmatter descriptions and loads the
+relevant one when the task matches — e.g. "hunt for IDOR on this target"
+loads `hunt-idor`. `commands/` and `templates/` are plain Markdown — paste
+them into your agent's context or your own notes when you need the checklists.
 
 > **Scope rule (applies to everything in this bundle):** only test targets that
 > sit inside a published bug bounty program's scope with explicit authorization,
@@ -66,16 +82,9 @@ Week 4 the first real hunt on one public program.
 
 This bundle follows the [Agent Skills open standard](https://agentskills.io):
 each skill is a `skills/<name>/SKILL.md` file with frontmatter (`name`,
-`description`). To use it:
-
-1. Copy the `skills/` folder into your agent's skills directory
-   (for example `~/.claude/skills/` for Claude Code, or your agent's
-   equivalent).
-2. The agent discovers skills by their frontmatter descriptions and loads the
-   relevant one when the task matches — e.g. "hunt for IDOR on this target"
-   loads `hunt-idor`.
-3. `commands/` and `templates/` are plain Markdown — paste them into your
-   agent's context or your own notes when you need the checklists.
+`description`). Copy the `skills/` folder into your agent's skills directory
+(for example `~/.claude/skills/` for Claude Code, or your agent's equivalent)
+and the agent loads the right skill for the task.
 
 ## Beginner path (the honest version)
 
@@ -86,6 +95,11 @@ each skill is a `skills/<name>/SKILL.md` file with frontmatter (`name`,
   what get paid.
 - Valid reports earn private program invitations — better pay, less
   competition. That is the compounding path.
+
+## Contributing
+
+Beginners welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Small, well-scoped
+tasks are listed in [GOOD-FIRST-ISSUES.md](GOOD-FIRST-ISSUES.md).
 
 ## v2 roadmap
 
@@ -98,3 +112,7 @@ as real reports come back from triage.
 ## License
 
 MIT — see `LICENSE`.
+
+---
+
+If this helps your hunting, star it ⭐ — it helps other beginners find it.
